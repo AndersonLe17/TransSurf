@@ -16,6 +16,9 @@
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Alertify -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
 </head>
 
 <body>
@@ -42,7 +45,7 @@
                         <a href="./pages/contactanos.html" class="nav-link text-white">Contáctanos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-white">Iniciar Sesión</a>
+                        <a href="#" class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
                     </li>
                 </ul>
             </div>
@@ -325,12 +328,97 @@
         </div>
     </footer>
 
+    <!-- Modal -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content py-4">
+                <div class="modal-body" id="formLogin">
+                    <h3 class="text-center mb-4 text-white">Iniciar Sesión</h3>
+                    <div class="form-logreg">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-pill" id="inputEmail" placeholder="Correo Electronico">
+                            <label for="inputEmail">Correo Electronico</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control rounded-pill" id="inputPassword" placeholder="Password">
+                            <label for="inputPassword">Password</label>
+                        </div>
+                    </div>
+                    <div class="text-center my-3">
+                        <button class="btn btn-success px-5 rounded-pill" id="btn-login">Login</button>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-white">¿No estas registrado? <a href="#" class="text-decoration-none fw-bold" id="tagRegister">Registrate</a></p>
+                    </div>
+                </div>
+                <div class="modal-body d-none" id="formRegister">
+                    <h3 class="text-center mb-4 text-white">Registrarse</h3>
+                    <div class="form-logreg">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-pill" id="inputNombre" placeholder="Nombres">
+                            <label for="inputNombre">Nombres</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-pill" id="inputApellidos" placeholder="Apellidos">
+                            <label for="inputApellidos">Apellidos</label>
+                        </div>
+                        <div class="row g-2 mb-3">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <select class="form-select rounded-pill" id="selectDocumento" aria-label="Documento">
+                                        <option value="1">DNI</option>
+                                        <option value="2">CE</option>
+                                    </select>
+                                    <label for="selectDocumento">Documento</label>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control rounded-pill" id="inputNumDoc" placeholder="N° Documento">
+                                    <label for="inputNumDoc">N° Documento</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-pill" id="inputRegEmail" placeholder="Correo Electronico">
+                            <label for="inputRegEmail">Correo Electronico</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-pill" id="inputRegPassword" placeholder="Password">
+                            <label for="inputRegPassword">Password</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-pill" id="inputRegRePassword" placeholder="Confirmar Password">
+                            <label for="inputRegRePassword">Confirmar Password</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="tel" class="form-control rounded-pill" id="inputCelular" placeholder="Celular">
+                            <label for="inputCelular">Celular</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="date" class="form-control rounded-pill" id="inputFechaNac" placeholder="Fecha de Nacimiento">
+                            <label for="inputFechaNac">Fecha de Nacimiento</label>
+                        </div>
+                    </div>
+                    <div class="text-center my-3">
+                        <button class="btn btn-success px-5 rounded-pill" id="btn-register">Registrarse</button>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-white">¿Ya tienes una cuenta? <a href="#" class="text-decoration-none fw-bold" id="tagInicio">Inicia Sesión</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Owl Carousel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Alertify -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <!-- Scrips -->
     <script src="./assets/js/index.js"></script>
 </body>

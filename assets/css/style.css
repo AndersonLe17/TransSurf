@@ -228,4 +228,27 @@ footer .copyright p {
   font-size: 1em;
 }
 
+#modalLogin .modal-content {
+  background: rgba(0, 0, 0, 0.6666666667);
+  font-family: "Marvel", sans-serif;
+}
+#modalLogin .modal-content .modal-body h3 {
+  font-weight: bolder;
+  font-size: 2.75em;
+}
+#modalLogin .modal-content .modal-body .form-logreg .form-floating input {
+  background: none;
+  color: #fff;
+}
+#modalLogin .modal-content .modal-body .form-logreg .form-floating select {
+  background: none;
+  color: #fff;
+}
+#modalLogin .modal-content .modal-body .form-logreg .form-floating select option {
+  color: black;
+}
+#modalLogin .modal-content .modal-body .form-logreg .form-floating label {
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */
