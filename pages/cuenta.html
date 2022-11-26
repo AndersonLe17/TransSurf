@@ -56,7 +56,7 @@
     </nav>
 
     <!-- Contenido -->
-    <main>
+    <main style="min-height: 55vh;">
         <section class="section-account container my-4">
             <div class="row">
                 <div class="mb-3 col-12 col-md-4 col-opc-account">
@@ -159,8 +159,32 @@
                         <div class="card-header fs-5">
                             Mis Reservas
                         </div>
-                        <div class="card-body">
-
+                        <div class="card-body table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Hora</th>
+                                        <th scope="col">Origen - Destino</th>
+                                        <th scope="col">N° Asiento</th>
+                                        <th scope="col">Costo</th>
+                                        <th scope="col">Comprobante</th>
+                                        <th scope="col">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listReservas">
+                                    <tr>
+                                        <th scope="row">2022-11-27</th>
+                                        <td>20:30:00</td>
+                                        <td>Lima - Huancayo</td>
+                                        <td>14</td>
+                                        <td>S/55.00</td>
+                                        <td><a class="btn btn-success py-0" href="#">Generar</a></td>
+                                        <td><span class="badge text-dark bg-info">Activo</span></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                     <div class="my-2">

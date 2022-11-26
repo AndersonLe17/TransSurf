@@ -100,58 +100,7 @@
                         </div>
                     </div>
                     <h4 class="fw-lighter m-0 pt-2">DATOS DEL PASAJERO</h4>
-                    <div>
-                        <p class="text-primary border-bottom m-0 py-2 border-2 border-dark">PASAJERO 1 <span class="badge text-dark bg-warning">Asiento 15</span></p>
-                        <form class="my-1 row g-2 pb-2 border-bottom border-2 border-success">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <select class="form-select" name="sTipoDoc">
-                                        <option value="1">DNI</option>
-                                        <option value="2">CE</option>
-                                    </select>
-                                    <label for="sTipoDoc">Tipo de Documento</label> 
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="tel" class="form-control" name="iNumDoc" placeholder="N° Documento">
-                                    <label for="iNumDoc">N° Documento</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" name="iNombre" placeholder="Nombres" readonly>
-                                    <label for="iNombre">Nombres</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" name="iApellidos" placeholder="Apellidos" readonly>
-                                    <label for="iApellidos">Apellidos</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <input type="date" class="form-control" name="iFecha" placeholder="Fecha de Nacimiento" readonly>
-                                    <label for="iFecha">Fecha de Nacimiento</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <p class="text-primary m-0">DATOS PARA CONTACTO</p>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="tel" class="form-control" name="iCelular" placeholder="N° Celular" readonly>
-                                    <label for="iCelular">N° Celular</label>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" name="iCorreo" placeholder="Correo Electronico" readonly>
-                                    <label for="iCorreo">Correo Electronico</label>
-                                </div>
-                            </div>
-                        </form>
+                    <div id="dForms">
                         <p class="text-primary border-bottom m-0 py-2 border-2 border-dark">PASAJERO 1 <span class="badge text-dark bg-warning">Asiento 15</span></p>
                         <form class="my-1 row g-2 pb-2 border-bottom border-2 border-success">
                             <div class="col-md-6">
@@ -204,51 +153,52 @@
                             </div>
                         </form>
 
-                        <div>
-                            <form class="my-1 row g-2">
-                                <h4 class="fw-lighter m-0 pt-2">DATOS DEL TITULAR DE LA TARJETA</h4>
-                                <div class="col-md-4">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="iNombre" placeholder="Nombres">
-                                        <label for="iNombre">Nombres</label>
-                                    </div>
+                        
+                    </div>
+                    <div>
+                        <form class="my-1 row g-2" id="paymentForm">
+                            <h4 class="fw-lighter m-0 pt-2">DATOS DEL TITULAR DE LA TARJETA</h4>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="iNombre" placeholder="Nombres" required>
+                                    <label for="iNombre">Nombres</label>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="iApellidos" placeholder="Apellidos">
-                                        <label for="iApellidos">Apellidos</label>
-                                    </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="iApellidos" placeholder="Apellidos" required>
+                                    <label for="iApellidos">Apellidos</label>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="form-floating">
-                                        <input type="tel" class="form-control" id="iNumDoc" placeholder="N° Documento">
-                                        <label for="iNumDoc">N° Documento</label>
-                                    </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="iNumDoc" placeholder="N° Documento" required>
+                                    <label for="iNumDoc">N° Documento</label>
                                 </div>
-                                <h4 class="fw-lighter mb-0 pt-2 border-top border-2 border-success">DATOS DE LA TARJETA</h4>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="tel" class="form-control" id="iTarjeta" placeholder="N° Tarjeta">
-                                        <label for="iTarjeta">N° Tarjeta</label>
-                                    </div>
+                            </div>
+                            <h4 class="fw-lighter mb-0 pt-2 border-top border-2 border-success">DATOS DE LA TARJETA</h4>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="iTarjeta" placeholder="N° Tarjeta" required>
+                                    <label for="iTarjeta">N° Tarjeta</label>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="form-floating">
-                                        <input type="tel" class="form-control" id="iFechaExp" placeholder="MM/YYYY">
-                                        <label for="iFechaExp">Fecha de Expiracion</label>
-                                    </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="iFechaExp" placeholder="MM/YYYY" required>
+                                    <label for="iFechaExp">Fecha de Expiracion</label>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="form-floating">
-                                        <input type="tel" class="form-control" id="iCVV" placeholder="CVV">
-                                        <label for="iCVV">CVV</label>
-                                    </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="iCVV" placeholder="CVV" required>
+                                    <label for="iCVV">CVV</label>
                                 </div>
-                                <div class="pt-3">
-                                    <button class="btn btn-success w-100" type="submit">PROCESAR</button>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="pt-3">
+                                <button class="btn btn-success w-100" type="submit">PROCESAR</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -396,6 +346,6 @@
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <!-- Scrips -->
     <script type="module" src="../assets/js/payment.js"></script>
-    <script src="../assets/js/auth.js"></script>
+    <script type="module" src="../assets/js/auth.js"></script>
 </body>
 </html>

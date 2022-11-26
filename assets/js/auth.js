@@ -1,3 +1,5 @@
+import {Cliente} from "./Cliente.js";
+
 document.getElementById("tagRegister").addEventListener("click",() => {
     document.getElementById("formLogin").className = "modal-body d-none";
     document.getElementById("formRegister").className = "modal-body";

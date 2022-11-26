@@ -1,5 +1,6 @@
 import { Validator } from './Sesion.js';
 import { Cliente } from './Cliente.js';
+import { listarReservas } from './reserva.js';
 
 const clienteUser = await Validator();
 
@@ -18,6 +19,7 @@ opc.forEach((option) => {
         if (e.target.dataset.opc == "reservas") {
             document.querySelector(".col-account").classList.add("d-none");
             document.querySelector(".col-bookings").classList.remove("d-none");
+            listarReservas(clienteUser.idUsuario);
         } else {
             document.querySelector(".col-bookings").classList.add("d-none");
             document.querySelector(".col-account").classList.remove("d-none");
